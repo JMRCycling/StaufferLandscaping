@@ -1,4 +1,4 @@
-# GreenScape Landscaping Website
+# Stauffer Landscaping Website
 
 A modern, responsive website for a professional landscaping service company. This project features a clean design with smooth animations, mobile-friendly navigation, and an interactive contact form.
 
@@ -78,7 +78,7 @@ The color scheme can be easily customized by modifying CSS custom properties in 
 
 ### Content
 
-- **Company Name**: Update "GreenScape" in `index.html`
+- **Company Name**: Update "Stauffer Landscaping" in `index.html`
 - **Contact Information**: Modify the contact section with your actual phone, email, and address
 - **Services**: Edit service cards in the services section
 - **About Section**: Customize the company description and features
