@@ -49,53 +49,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        service: document.getElementById('service').value,
-        message: document.getElementById('message').value
-    };
-    
-    // In a real application, you would send this data to a server
-    // For now, we'll just show a success message
-    console.log('Form submitted:', formData);
-    
-    // Show success message
-    const successMessage = document.createElement('div');
-    successMessage.style.cssText = `
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #2d7a3e;
-        color: white;
-        padding: 2rem 3rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        z-index: 10000;
-        text-align: center;
-    `;
-    successMessage.innerHTML = `
-        <h3 style="margin-bottom: 1rem;">Thank You!</h3>
-        <p>Your message has been received. We'll get back to you soon.</p>
-    `;
-    document.body.appendChild(successMessage);
-    
-    // Remove success message after 3 seconds
-    setTimeout(() => {
-        successMessage.remove();
-    }, 3000);
-    
-    // Reset form
-    contactForm.reset();
-});
+// Form submits to Formspree - no custom JavaScript needed
+// Formspree will handle the submission and show their success page
 
 // Add fade-in animation on scroll
 const observerOptions = {
