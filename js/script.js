@@ -79,6 +79,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = lightbox.querySelector('.lightbox-image');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+// Open lightbox when clicking gallery images
+document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Close lightbox functions
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+    }
+});
+
 // Active navigation highlight on scroll
 window.addEventListener('scroll', () => {
     let current = '';
