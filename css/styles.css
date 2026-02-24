@@ -62,10 +62,20 @@ header {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .logo h1 {
     font-size: 1.8rem;
     color: var(--secondary-color);
     font-weight: 700;
+}
+.logo img {
+    height: 50px;
+    width: auto;
 }
 
 .nav-menu {
